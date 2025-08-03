@@ -19,7 +19,7 @@ const productos = [
   },
   {
     nombre: "Producto C",
-    imagen: "Imagenes/Imagen.jpg",
+    imagen: "Imagenes/Imagen3.jpg",
     precios: {
       unidad: 9,
       "3": 25
@@ -50,3 +50,4 @@ function mostrarProductos(lista) {
 }
 
 mostrarProductos(productos);
+
