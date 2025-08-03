@@ -1,7 +1,7 @@
 const productos = [
   {
     nombre: "Producto A",
-    imagen: "https://via.placeholder.com/200x150?text=Producto+A",
+    imagen: "Imagenes/Imagen1.jpg",
     precios: {
       unidad: 10,
       "3": 28,
@@ -10,7 +10,7 @@ const productos = [
   },
   {
     nombre: "Producto B",
-    imagen: "https://via.placeholder.com/200x150?text=Producto+B",
+    imagen: "Imagenes/Imagen2.jpg",
     precios: {
       unidad: 12,
       "5": 45,
@@ -19,7 +19,7 @@ const productos = [
   },
   {
     nombre: "Producto C",
-    imagen: "https://via.placeholder.com/200x150?text=Producto+C",
+    imagen: "Imagenes/Imagen.jpg",
     precios: {
       unidad: 9,
       "3": 25
