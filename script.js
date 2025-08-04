@@ -49,5 +49,3 @@ function mostrarProductos(lista) {
 
 mostrarProductos(productos);
 
-
-
