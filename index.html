@@ -8,10 +8,27 @@
 <body>
   <h1>Catálogo de Productos</h1>
 
+  <div id="categorias" class="categorias">
+  <button onclick="filtrarCategoria('todos')">Todos</button>
+  <button onclick="filtrarCategoria('Belleza / Cosmética')">Belleza</button>
+  <button onclick="filtrarCategoria('Ropa / Accesorios')">Ropa Interior</button>
+  <button onclick="filtrarCategoria('Escolar / Papelería')">Escolar</button>
+  <button onclick="filtrarCategoria('Hogar / Cocina')">Hogar</button>
+  <button onclick="filtrarCategoria('Juguetes / Regalos')">Juguetes</button>
+  <button onclick="filtrarCategoria('Organización / Almacenamiento')">Organización</button>
+  <button onclick="filtrarCategoria('Decoración / Fiesta')">Fiesta</button>
+  <button onclick="filtrarCategoria('Electrónica / Gadgets')">Electrónica</button>
+  <button onclick="filtrarCategoria('Higiene / Cuidado Personal')">Higiene</button>
+  <button onclick="filtrarCategoria('Mascotas')">Mascotas</button>
+  </div>
+
+
   <div class="productos" id="catalogo">
     <!-- Los productos se generan desde script.js -->
   </div>
 
+  <script src="productos.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>
