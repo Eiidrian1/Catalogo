@@ -1,53 +1,53 @@
-const productos = [
-  {
-    nombre: "Producto A",
-    imagen: "Imagenes/Imagen1.jpg",
-    precios: {
-      unidad: 10,
-      "3": 28,
-      "6": 50
-    }
-  },
-  {
-    nombre: "Producto B",
-    imagen: "Imagenes/Imagen2.jpg",
-    precios: {
-      unidad: 12,
-      "5": 45,
-      "10": 85
-    }
-  },
-  {
-    nombre: "Producto C",
-    imagen: "Imagenes/Imagen3.jpg",
-    precios: {
-      unidad: 9,
-      "3": 25
-    }
+function filtrarCategoria(nombreCategoria) {
+  if (nombreCategoria === 'todos') {
+    mostrarProductos(productos);
+  } else {
+    const filtrados = productos.filter(p => p.categoria === nombreCategoria);
+    mostrarProductos(filtrados);
   }
-];
+}
 
 function mostrarProductos(lista) {
   const contenedor = document.getElementById('catalogo');
   contenedor.innerHTML = "";
 
   lista.forEach(p => {
-    let preciosHTML = "";
+    let tablaPrecios = "";
 
-    for (let cantidad in p.precios) {
-      let label = cantidad === "unidad" ? "Unidad" : `Pack x${cantidad}`;
-      preciosHTML += `<p><strong>${label}:</strong> S/${p.precios[cantidad]}</p>`;
+    if (p.precios) {
+      tablaPrecios += `
+        <table style="width:100%; font-size:14px; margin-top:10px; border-collapse: collapse; text-align: center;">
+          <thead>
+            <tr>
+              <th style="padding: 6px;">Pedido mínimo</th>
+              <th style="padding: 6px;">Precio unitario</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+      for (let cantidad in p.precios) {
+        tablaPrecios += `
+          <tr>
+            <td style="padding: 6px;">${cantidad}</td>
+            <td style="padding: 6px;">S/${p.precios[cantidad]}</td>
+          </tr>
+        `;
+      }
+      tablaPrecios += `</tbody></table>`;
     }
 
     contenedor.innerHTML += `
       <div class="producto">
         <h3>${p.nombre}</h3>
-        <img src="${p.imagen}" alt="${p.nombre}">
-        ${preciosHTML}
+        <img src="${p.imagen || 'imagenes/no-disponible.jpg'}" alt="${p.nombre}">
+        <p>${p.descripcion || ''}</p>
+        ${tablaPrecios}
       </div>
     `;
   });
 }
 
 mostrarProductos(productos);
+
+
 
