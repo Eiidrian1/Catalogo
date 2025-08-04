@@ -9,36 +9,71 @@ h1 {
 }
 
 .productos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* ⬅️ se adapta mejor */
+  gap: 40px;
+  justify-items: center;
+  padding: 20px;
 }
+
+
 
 .producto {
   background-color: #fff;
-  border: 1px solid #ccc;
-  width: 220px;
-  padding: 10px;
+  border: 1px solid #bbb;
+  width: 100%;
+  max-width: 650px;      /* ⬅️ Más ancho aún */
+  min-height: 420px;      /* ⬅️ Altura mínima para forzarlo a ser alto */
+  padding: 30px;          /* ⬅️ Más espacio interior */
+  box-shadow: 0 0 18px rgba(0,0,0,0.08);
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
 }
+
+
 
 .producto img {
   width: 100%;
-  height: auto;
-  max-height: 150px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.producto img {
-  width: 100%;
-  max-width: 250px; /* o el ancho que prefieras */
-  height: auto;
+  max-height: 220px;     /* ⬅️ Más grande */
   object-fit: contain;
-  display: block;
-  margin: 0 auto 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.categorias {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categorias button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  background-color: #008cff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.categorias button:hover {
+  background-color: #0b7dda;
+}
+
+.producto h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.producto p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 5px 0;
 }
