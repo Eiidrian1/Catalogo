@@ -17,12 +17,16 @@ h1 {
 }
 
 .producto {
-  background-color: #fff;
+  background-image: url('Img/KEVIMPORT.png'); /* ← Cambia el nombre según tu imagen */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  background-color: #fff; /* Color de respaldo */
   border: 1px solid #bbb;
-  width: 100%;
-  max-width: 650px;      /* ⬅️ Más ancho aún */
-  min-height: 420px;      /* ⬅️ Altura mínima para forzarlo a ser alto */
-  padding: 30px;          /* ⬅️ Más espacio interior */
+  max-width: 650px;
+  min-height: 420px;
+  padding: 30px;
   box-shadow: 0 0 18px rgba(0,0,0,0.08);
   border-radius: 12px;
   text-align: center;
@@ -32,6 +36,7 @@ h1 {
   gap: 15px;
   justify-content: space-between;
 }
+
 
 .producto img {
   width: 100%;
@@ -78,3 +83,4 @@ h1 {
   line-height: 1.6;
   margin: 5px 0;
 }
+
