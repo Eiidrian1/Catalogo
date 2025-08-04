@@ -1,8 +1,10 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f1f2ff; /* ← Cambia esto por cualquier color */
 }
+
+
 
 h1 {
   text-align: center;
@@ -54,14 +56,21 @@ h1 {
 }
 
 .categorias button {
-  padding: 10px 15px;
-  margin: 5px;
+  padding: 15px 25px;
+  margin: 8px;
+  font-size: 16px;
+  background-color: #000;     /* Fondo negro */
+  color: #fff;                /* Texto blanco */
   border: none;
-  background-color: #008cff;
-  color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.categorias button:hover {
+  background-color: #333;     /* Gris más claro al pasar el mouse */
+}
+
 
 .categorias button:hover {
   background-color: #0b7dda;
@@ -78,4 +87,3 @@ h1 {
   line-height: 1.6;
   margin: 5px 0;
 }
-
