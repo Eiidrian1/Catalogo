@@ -4,8 +4,6 @@ body {
   background-color: #f1f2ff; /* ← Cambia esto por cualquier color */
 }
 
-
-
 h1 {
   text-align: center;
 }
@@ -48,8 +46,6 @@ h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .categorias {
   text-align: center;
   margin-bottom: 20px;
@@ -87,3 +83,4 @@ h1 {
   line-height: 1.6;
   margin: 5px 0;
 }
+
